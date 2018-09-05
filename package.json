@@ -21,7 +21,7 @@
   },
   "scripts": {
     "prepublish": "npm run build",
-    "build": "rm -rf dist && tsc -d",
+    "build": "rimraf -rf dist && tsc -d",
     "test-only": "npm run build && ava --verbose dist/**/*.test.js dist/*.test.js",
     "test": "tslint src/**/*.ts && npm run test-only"
   },
@@ -32,6 +32,7 @@
     "ava": "^0.25.0",
     "graphql": "0.13.2",
     "graphql-tag": "^2.9.2",
+    "rimraf": "^2.6.2",
     "semantic-release": "^15.5.2",
     "tslint": "5.9.1",
     "tslint-config-standard": "7.0.0",
